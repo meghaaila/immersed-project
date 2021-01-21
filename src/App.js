@@ -1,23 +1,19 @@
 import logo from './logo.svg';
-import './App.css';
+import './App.scss';
+import Header from "./components/Header/Header";
+import Footer from "./components/Footer/Footer";
+import CurrentInformation from "./components/CurrentInformation/CurrentInformation";
+import Container from "./components/Container/Container";
+import React, { useState } from 'react';
 
 function App() {
+  const [role, setRole] = useState('admin');
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header onClickCallBack={(val) => setRole(val.value)}/>
+      <div className={role === "admin"? '' : 'hidden'}><CurrentInformation /> </div>
+      <Container />
+      <Footer />
     </div>
   );
 }

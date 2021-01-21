@@ -1,0 +1,19 @@
+@import "../../styles.scss";
+
+.currentInformation{
+  display: flex;
+  height: 70px;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid black;
+  background-color: rgba(86, 13, 181, 0.6);
+}
+.blink {
+  animation: blinker 2s linear infinite;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}

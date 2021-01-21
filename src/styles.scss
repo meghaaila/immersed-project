@@ -1,0 +1,25 @@
+button{
+   height: 30px;
+  line-height: 50px;
+  height: 48px;
+  float: left;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 20px;
+  font-weight: 500;
+  margin: 0 20px;
+  cursor: pointer;
+}
+.primary{
+    background: #f55959;
+    color: white;
+      border: none;
+}
+.secondary{
+   background: transparent;
+   border: 1px solid #f55959;
+  color: #f55959;
+}
+.hidden{
+  display: none;
+}

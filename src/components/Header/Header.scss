@@ -1,0 +1,30 @@
+#header{
+    position: sticky;
+    top: 0;
+    left: 0;
+    height: 70px;
+    width: -webkit-fill-available;
+    z-index: 5;
+    background: rgba(44,13,68,.6);
+    color: white;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    padding: 0 20px;
+    justify-content: space-between;
+}
+
+#img{
+	height: 45px;
+	float: right;
+  cursor: pointer
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+.show-dropdown{
+  position: absolute;
+    right: 19px;
+    top: 51px;
+}
