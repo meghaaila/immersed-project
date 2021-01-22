@@ -1,10 +1,11 @@
+import React, { useState } from 'react';
+
 import logo from './logo.svg';
 import './App.scss';
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import CurrentInformation from "./components/CurrentInformation/CurrentInformation";
 import Container from "./components/Container/Container";
-import React, { useState } from 'react';
 import axios from "axios";
 function App() {
   const [role, setRole] = useState('admin');

@@ -1,4 +1,4 @@
-import {Component} from "react";
+import React, {Component} from "react";
 import "./Container.scss";
 import AreaChart from "../AreaChart/AreaChart";
 import axios from "axios";
@@ -6,7 +6,7 @@ import Filters from "../Filters/Filters"
 import Popup from 'reactjs-popup';
 import 'reactjs-popup/dist/index.css';
 import CreateRoles from "../CreateRoles/CreateRoles"
-
+const url = './data/data.json'
 export default class Container extends Component {
   constructor(props){
     super(props);
@@ -22,13 +22,24 @@ export default class Container extends Component {
     this.getData =  this.getData.bind(this);
   }
   async getData() {
-    await axios.get('./data/data.json')
+    await axios.get(url)
     .then((res)=> {
       this.setState({data: res.data.chartData[this.state.ind]})
 
     }).catch((err)=>{
       console.log(err);
     })
+ }
+
+ async setRole(obj){
+   console.log("successfully added role:", obj)
+   /*await axios.post(url, obj)
+   .then((res)=> {
+     console.log("successful addition of roles")
+
+   }).catch((err)=>{
+     console.log(err);
+   })*/
  }
 
   componentDidMount(){
@@ -41,7 +52,7 @@ export default class Container extends Component {
           <button className="primary">Teams</button>
           <button className="secondary">Self</button>
           <div style={{float:'right'}}>
-            <CreateRoles />
+            <CreateRoles  onClickCallBack={(obj) =>  this.setRole(obj)}/>
           </div>
         </div>
         <Filters options = {this.state.options} onClickCallBack={(val) =>  this.setState({ind: 1}, () => this.getData()) }/>

@@ -1,7 +1,6 @@
 import "./Header.scss";
 import Dropdown from 'react-dropdown';
 import 'react-dropdown/style.css';
-import Select from 'react-select'
 import React, { useState } from 'react';
 
 const settingsIcon = process.env.PUBLIC_URL +"./icons/settings.png";

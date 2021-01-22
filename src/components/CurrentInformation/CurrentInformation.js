@@ -1,4 +1,5 @@
 import "./CurrentInformation.scss";
+import React from "react";
 
 function CurrentInformation() {
   return (
