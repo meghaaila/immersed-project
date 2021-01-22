@@ -15,7 +15,7 @@ describe('<Container />', () => {
   });
 
   it('has the initial state count of zero', () => {
-    expect(wrapper.state()).toEqual({ data: {}, ind: 0, options: options, createRolesToggle: false });
+    expect(wrapper.state()).toEqual({ data: {}, ind: "nov2020", options: options, createRolesToggle: false });
   })
 
 

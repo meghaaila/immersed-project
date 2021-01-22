@@ -23,7 +23,7 @@ describe('<CreateRoles />', () => {
   it('change events', () => {
        const onClickCallBack = jest.fn();
     const wrap = mount(<CreateRoles  onClickCallBack={onClickCallBack}><Popup /></CreateRoles>);
-    console.log(wrap.find(Popup));
+  //  console.log(wrap.find(Popup));
   })
 
 });
