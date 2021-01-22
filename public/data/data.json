@@ -106,5 +106,9 @@
             ]
          }
       ]
+   ],
+   "roles":[
+     { "value": "admin", "label": "Admin", "id":0 },
+     { "value": "megha", "label": "Megha", "id": 1 }
    ]
 }

@@ -1,4 +1,5 @@
 import "./Header.scss";
+import Dropdown from 'react-dropdown';
 import 'react-dropdown/style.css';
 import Select from 'react-select'
 import React, { useState } from 'react';
@@ -7,10 +8,7 @@ const settingsIcon = process.env.PUBLIC_URL +"./icons/settings.png";
 
 
 function Header(props) {
-  const options = [
-    { value: 'admin', label: 'Admin' },
-    { value: 'megha', label: 'Megha' }
-  ]
+  const options = props.roles;
   const [toggleDropdown, setToggleDropdown] = useState(false);
   const [selectedValue, setSelectedValue] = useState(options[0]);
   const toggleTrueFalse = () => setToggleDropdown(!toggleDropdown);
@@ -25,7 +23,7 @@ function Header(props) {
     	<div className="settings-dropdown">
         <img src={settingsIcon} id="img" alt="" onClick={toggleTrueFalse}/>
         <div className={toggleDropdown ? 'show-dropdown': 'hidden'}>
-          <Select options={options}  value={selectedValue} onChange={onSelect}
+          <Dropdown options={options}  value={selectedValue} onChange={onSelect}
           className="filters-class" />
         </div>
       </div>

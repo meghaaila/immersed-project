@@ -5,6 +5,7 @@ import axios from "axios";
 import Filters from "../Filters/Filters"
 import Popup from 'reactjs-popup';
 import 'reactjs-popup/dist/index.css';
+import CreateRoles from "../CreateRoles/CreateRoles"
 
 export default class Container extends Component {
   constructor(props){
@@ -40,7 +41,7 @@ export default class Container extends Component {
           <button className="primary">Teams</button>
           <button className="secondary">Self</button>
           <div style={{float:'right'}}>
-              <button className="primary" onClick={() => this.setState({ createRolesToggle : true})}>Create roles</button>
+            <CreateRoles />
           </div>
         </div>
         <Filters options = {this.state.options} onClickCallBack={(val) =>  this.setState({ind: 1}, () => this.getData()) }/>
@@ -48,9 +49,6 @@ export default class Container extends Component {
            <div className="article">{this.state.data.length >0 && <AreaChart data={this.state.data} type="area" />}</div>
           <div className="article">{this.state.data.length >0 && <AreaChart data={this.state.data} type="bar"/>}</div>
         </div>
-        {this.createRolesToggle &&  <Popup trigger={<button> Trigger</button>} position="right center">
-      <div>Popup content here !!</div>
-    </Popup>}
       </div>
     );
   }
