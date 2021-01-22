@@ -1,10 +1,10 @@
 import "./Filters.scss";
 import 'react-dropdown/style.css';
 import Dropdown from 'react-dropdown';
-import React, {useState} from "react";
+import React from "react";
 
 function Filters(props) {
-  const [dropdownValue, setDropdownValue] = useState(props.options[0]);
+  const [dropdownValue, setDropdownValue] = React.useState(props.options[0]);
   const controlStyles = {
     borderRadius: '1px solid black',
     padding: '5px',

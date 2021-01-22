@@ -49,8 +49,10 @@ export default class Container extends Component {
     return (
       <div id="container">
         <div style={{padding: "10px", height: "50px"}}>
-          <button className="primary">Teams</button>
-          <button className="secondary">Self</button>
+          <div>
+            <button className="primary">Teams</button>
+            <button className="secondary">Self</button>
+          </div>
           <div style={{float:'right'}}>
             <CreateRoles  onClickCallBack={(obj) =>  this.setRole(obj)}/>
           </div>

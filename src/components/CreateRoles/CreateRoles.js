@@ -45,7 +45,7 @@ export default class CreateRoles extends Component{
 	render(){
 		return(
       <Popup
-   trigger={<button className="primary">Create roles </button>}
+   trigger={<button className="primary" id="createRoles">Create roles </button>}
    modal
    nested
  >

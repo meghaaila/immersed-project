@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 import logo from './logo.svg';
 import './App.scss';
@@ -11,17 +11,18 @@ function App() {
   const [role, setRole] = useState('admin');
   const [allRoles, getAllRoles] = useState({});
 
-  async function getData() {
-    await axios.get('./data/data.json')
-    .then((res)=> {
-      getAllRoles(res.data.roles);
 
-    }).catch((err)=>{
-      console.log(err);
-    })
-  }
-  getData();
-
+  useEffect(() => {
+    const getData = async ()=> {
+      await axios.get('./data/data.json')
+      .then((res)=> {
+        getAllRoles(res.data.roles);
+      }).catch((err)=>{
+        console.log(err);
+      })
+    }
+    getData();
+  }, [])
   return allRoles.length >0 ? (
     <div className="App">
       <Header onClickCallBack={(val) => setRole(val.value)} roles ={allRoles}/>
