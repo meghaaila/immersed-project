@@ -16,7 +16,7 @@ export default class Container extends Component {
         {value: 'nov2020', label: '11/2020 - 12/2020'},
         {value: 'dec2020', label: '12/2020 - 01/2021'},
         {value: 'jan2021', label: '01/2021-01/2021'}],
-      ind : 0,
+      ind : "nov2020",
       createRolesToggle: false
     };
     this.getData =  this.getData.bind(this);
@@ -57,7 +57,7 @@ export default class Container extends Component {
             <CreateRoles  onClickCallBack={(obj) =>  this.setRole(obj)}/>
           </div>
         </div>
-        <Filters options = {this.state.options} onClickCallBack={(val) =>  this.setState({ind: 1}, () => this.getData()) }/>
+        <Filters options = {this.state.options} onClickCallBack={(val) =>  this.setState({ind: val.value}, () => this.getData()) }/>
         <div className="chart-areas">
            <div className="article">{this.state.data.length >0 && <AreaChart data={this.state.data} type="area" />}</div>
           <div className="article">{this.state.data.length >0 && <AreaChart data={this.state.data} type="bar"/>}</div>
