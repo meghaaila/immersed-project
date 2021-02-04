@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/immersed-project/static/css/main.b3c15252.chunk.css",
+    "main.js": "/immersed-project/static/js/main.b4b6d79a.chunk.js",
+    "main.js.map": "/immersed-project/static/js/main.b4b6d79a.chunk.js.map",
+    "runtime-main.js": "/immersed-project/static/js/runtime-main.1a038202.js",
+    "runtime-main.js.map": "/immersed-project/static/js/runtime-main.1a038202.js.map",
+    "static/css/2.2e8a70c6.chunk.css": "/immersed-project/static/css/2.2e8a70c6.chunk.css",
+    "static/js/2.7189e385.chunk.js": "/immersed-project/static/js/2.7189e385.chunk.js",
+    "static/js/2.7189e385.chunk.js.map": "/immersed-project/static/js/2.7189e385.chunk.js.map",
+    "static/js/3.41da63d3.chunk.js": "/immersed-project/static/js/3.41da63d3.chunk.js",
+    "static/js/3.41da63d3.chunk.js.map": "/immersed-project/static/js/3.41da63d3.chunk.js.map",
+    "index.html": "/immersed-project/index.html",
+    "static/css/2.2e8a70c6.chunk.css.map": "/immersed-project/static/css/2.2e8a70c6.chunk.css.map",
+    "static/css/main.b3c15252.chunk.css.map": "/immersed-project/static/css/main.b3c15252.chunk.css.map",
+    "static/js/2.7189e385.chunk.js.LICENSE.txt": "/immersed-project/static/js/2.7189e385.chunk.js.LICENSE.txt",
+    "static/media/logo.6ce24c58.svg": "/immersed-project/static/media/logo.6ce24c58.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.1a038202.js",
+    "static/css/2.2e8a70c6.chunk.css",
+    "static/js/2.7189e385.chunk.js",
+    "static/css/main.b3c15252.chunk.css",
+    "static/js/main.b4b6d79a.chunk.js"
+  ]
+}
