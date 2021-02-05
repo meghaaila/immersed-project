@@ -1,4 +1,14 @@
-# Getting Started with Create React App
+# App deployed
+https://meghaaila.github.io/immersed-project/
+
+## Different functionalities available
+1. Click on Settings icon on the top right to change the view of the user from admin to a normal user.
+2. When in admin mode, you can add a new role by clicking on "Create role";
+3. When in user mode, you can join any current team.
+4. When you click the dropdown to a different date, the graph changes to show how it'll be connected to show the efficiency of the teams and how many people were using the system in a said date.
+5. Clicking Teams would give you details on all the teams available and what their projects are, while clicking on self will give you more information on just the user himself/herself. (WIP)
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
