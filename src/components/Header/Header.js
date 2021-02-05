@@ -3,7 +3,7 @@ import Dropdown from 'react-dropdown';
 import 'react-dropdown/style.css';
 import React from 'react';
 
-const settingsIcon = process.env.PUBLIC_URL +"./icons/settings.png";
+const settingsIcon = process.env.PUBLIC_URL +"/icons/settings.png";
 
 
 function Header(props) {
@@ -14,7 +14,8 @@ function Header(props) {
 
   function onSelect(val){
     setSelectedValue(val)
-    props.onClickCallBack({val})
+    toggleTrueFalse();
+    props.onClickCallBack(val)
   }
   return (
     <div id="header">

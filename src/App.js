@@ -23,11 +23,12 @@ function App() {
     }
     getData();
   }, [])
+  console.log(role);
   return allRoles.length >0 ? (
     <div className="App">
       <Header onClickCallBack={(val) => setRole(val.value)} roles ={allRoles}/>
-      <div className={role === "admin"? '' : 'hidden'}><CurrentInformation /> </div>
-      <Container />
+      <div className={role === "admin"? 'hidden' : ''}><CurrentInformation /> </div>
+      <Container currentRole={role}/>
       <Footer />
     </div>
   ): <div/>;

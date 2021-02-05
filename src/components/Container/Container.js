@@ -53,7 +53,7 @@ export default class Container extends Component {
             <button className="primary">Teams</button>
             <button className="secondary">Self</button>
           </div>
-          <div style={{float:'right'}}>
+          <div style={{float:'right'}} className={this.props.currentRole === "admin"? '' : 'hidden'}>
             <CreateRoles  onClickCallBack={(obj) =>  this.setRole(obj)}/>
           </div>
         </div>
